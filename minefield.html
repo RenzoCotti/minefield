@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="minefield.css">
+		<script src="bundle.js" charset="utf-8"></script>
+		<title>Minefield</title>
+	</head>
+	<body>
+		<div class="minefield">
+
+			<div class="settings">
+				<table>
+					<tr>
+						<td>New game:</td>
+					</tr>
+					<tr>
+						<td><div class="startGame" id="ez">Easy</div></td>
+					</tr>
+					<tr>
+						<td><div class="startGame" id="mm">Medium</div></td>
+					</tr>
+					<tr>
+						<td><div class="startGame" id="hard">Hard</div></td>
+					</tr>
+					<tr>
+						<td><div class="startGame" id="vhard">Very Hard</div></td>
+					</tr>
+
+					<tr>
+						<td>Mines: </td>
+						<td><input type="number" id="numberMines" min="1" max="200" value="10"></td>
+					</tr>
+
+					<tr>
+						<td>Width: </td>
+						<td><input type="number" id="width" min="1" max="30" value="10"></td>
+					</tr>
+
+					<tr>
+						<td>Height: </td>
+						<td><input type="number" id="height" min="1" max="30" value="10"></td>
+					</tr>
+
+					<tr>
+						<td><div class="startGame" id="new">New Custom Game</div></td>
+					</tr>
+				</table>
+
+
+			</div>
+
+
+			<div class="game-wrapper">
+				<div class="top">
+					<div id="score"></div> <div id="hiscore"></div> <div id="mines"></div>
+				</div>
+				<div id="game"></div>
+			</div>
+
+
+
+	</body>
+</html>

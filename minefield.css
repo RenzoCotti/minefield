@@ -1,0 +1,162 @@
+.startGame{
+	text-decoration: underline;
+	color: blue;
+	cursor: pointer;
+}
+
+input{
+	width: 50px;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+#vhard{
+	padding-bottom: 50px;
+}
+
+.settings{
+	position: fixed;
+	top: 100px;
+	left: 20px;
+}
+
+#score{
+	color:silver;
+	padding-right: 50px;
+}
+
+#hiscore{
+	color:gold;
+	padding-right: 50px;
+}
+
+.top{
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 20px 0;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.minefield{
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.game-wrapper{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#game{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;
+	font-family: serif;
+}
+
+.row{
+	display: flex;
+	flex-direction: row;
+}
+
+.cell{
+	width: 25px;
+	height: 25px;
+	background-color: black;
+	border: 1px solid gray;
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+.clicked{
+	background-color: lightgray;
+	width: 25px;
+	height: 25px;
+	border: 1px solid gray;
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+.flagged{
+	background-color: yellow;
+	width: 25px;
+	height: 25px;
+	border: 1px solid gray;
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+
+.exploded {
+	background-color: red;
+	width: 25px;
+	height: 25px;
+	border: 1px solid gray;
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+	font-size: 25px;
+}
+
+
+
+.disabled{
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+	font-size: 25px;
+}
+
+.cell:hover {
+	background-color: gray;
+	cursor: pointer;
+}
+
+.one{
+	color: blue;
+}
+
+.two{
+	color: green;
+}
+
+.three{
+	color: red;
+}
+
+.four{
+	color: purple;
+}
+
+.five{
+	color: maroon;
+}
+
+.six{
+	color: cyan;
+}
+
+.seven{
+	color: black;
+}
+
+.eight{
+	color: darkgray;
+}
