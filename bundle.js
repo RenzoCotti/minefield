@@ -151,7 +151,13 @@ var minegenerator_1 = require("./minegenerator");
 function reset() {
     clearInterval(numscore);
     scorelabel.innerHTML = "";
-    hiscorelabel.innerHTML = "";
+    var hi = localStorage.getItem("hi" + difficulty);
+    if (hi) {
+        hiscorelabel.innerHTML = "High-Score (" + difficulty + "): " + hi;
+    }
+    else {
+        hiscorelabel.innerHTML = "";
+    }
     game.innerHTML = "";
     field = [];
     first = true;
@@ -372,13 +378,6 @@ function handleScore() {
     clearInterval(numscore);
     score = 0;
     scorelabel.innerHTML = "Score: " + score;
-    var hi = localStorage.getItem("hi" + difficulty);
-    if (hi) {
-        hiscorelabel.innerHTML = "High-Score (" + difficulty + "): " + hi;
-    }
-    else {
-        hiscorelabel.innerHTML = "";
-    }
     numscore = setInterval(function () {
         score++;
         scorelabel.innerHTML = "Score: " + score;

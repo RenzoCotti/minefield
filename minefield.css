@@ -1,10 +1,86 @@
+html{
+	--grid-colour: saddlebrown;
+	--cell-colour: seagreen;
+	--clicked-colour: lightgray;
+	--flagged-colour: orange;
+	--exploded-colour: red;
+	--hiscore-colour: gold;
+	--score-colour: silver;
+}
+
+
+.footbar{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+}
+.title{
+	text-align: center;
+	color: black;
+	font-size: 30px;
+	font-weight: 100;
+	z-index: 10;
+}
+.copy{
+	color: rgba(0,0,0,0.2);
+}
+
+
+.minefield{
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.input-field{
+	display: flex;
+	flex-direction: row;
+}
+
+.custom{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+}
+
+.settings{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+
+#new{
+	margin-top: 20px;
+}
+
+.difficulty{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
 .startGame{
-	text-decoration: underline;
-	color: blue;
 	cursor: pointer;
+	padding: 10px;
+	margin: 0px 10px;
+	background-color: gray;
+}
+
+.startGame:hover{
+	background-color: lightgray;
 }
 
 input{
+	margin-right:30px;
+	margin-left: 10px;
+	font-size: 20px;
 	width: 50px;
 }
 
@@ -12,24 +88,21 @@ body{
 	font-family: sans-serif;
 }
 
-#vhard{
-	padding-bottom: 50px;
-}
-
-.settings{
-	position: fixed;
-	top: 100px;
-	left: 20px;
-}
 
 #score{
-	color:silver;
+	color: var(--score-colour);
 	padding-right: 50px;
+	width: 100px;
 }
 
 #hiscore{
-	color:gold;
+	color: var(--hiscore-colour);
 	padding-right: 50px;
+	width: 100px;
+}
+
+#mines{
+	width: 100px;
 }
 
 .top{
@@ -42,27 +115,17 @@ body{
 	width: 100%;
 	top: 0px;
 	left: 0px;
+	z-index: 2;
 }
 
-.minefield{
-	width: 50%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-}
-
-.game-wrapper{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
 
 #game{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-top: 50px;
+	padding: 20px;
+	padding-top: 80px;
 	font-family: serif;
 }
 
@@ -74,28 +137,34 @@ body{
 .cell{
 	width: 25px;
 	height: 25px;
-	background-color: black;
-	border: 1px solid gray;
+	background-color: var(--cell-colour);
+	border: 1px solid var(--grid-colour);
 	text-align: center;
 	font-weight: bold;
 	line-height: 25px;
 }
 
+
+.cell:hover {
+	background-color: var(--grid-colour);
+	cursor: pointer;
+}
+
 .clicked{
-	background-color: lightgray;
+	background-color: var(--clicked-colour);
 	width: 25px;
 	height: 25px;
-	border: 1px solid gray;
+	border: 1px solid var(--grid-colour);
 	text-align: center;
 	font-weight: bold;
 	line-height: 25px;
 }
 
 .flagged{
-	background-color: yellow;
+	background-color: var(--flagged-colour);
 	width: 25px;
 	height: 25px;
-	border: 1px solid gray;
+	border: 1px solid var(--grid-colour);
 	text-align: center;
 	font-weight: bold;
 	line-height: 25px;
@@ -103,10 +172,10 @@ body{
 
 
 .exploded {
-	background-color: red;
+	background-color: var(--exploded-colour);
 	width: 25px;
 	height: 25px;
-	border: 1px solid gray;
+	border: 1px solid var(--grid-colour);
 	text-align: center;
 	font-weight: bold;
 	line-height: 25px;
@@ -124,10 +193,6 @@ body{
 	font-size: 25px;
 }
 
-.cell:hover {
-	background-color: gray;
-	cursor: pointer;
-}
 
 .one{
 	color: blue;

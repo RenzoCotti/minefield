@@ -5,7 +5,13 @@ function reset():void{
 
 	clearInterval(numscore);
 	scorelabel.innerHTML="";
-	hiscorelabel.innerHTML="";
+
+	var hi:string = localStorage.getItem("hi"+difficulty);
+	if(hi){
+		hiscorelabel.innerHTML="High-Score ("+difficulty+"): "+hi;
+	} else {
+		hiscorelabel.innerHTML="";
+	}
 
 
 	game.innerHTML = "";
@@ -250,12 +256,6 @@ function handleScore(){
 	clearInterval(numscore);
 	score = 0;
 	scorelabel.innerHTML="Score: "+score;
-	var hi:string = localStorage.getItem("hi"+difficulty);
-	if(hi){
-		hiscorelabel.innerHTML="High-Score ("+difficulty+"): "+hi;
-	} else {
-		hiscorelabel.innerHTML="";
-	}
 
 	numscore = setInterval(
 		function(){

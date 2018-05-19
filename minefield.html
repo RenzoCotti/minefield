@@ -9,56 +9,49 @@
 	<body>
 		<div class="minefield">
 
-			<div class="settings">
-				<table>
-					<tr>
-						<td>New game:</td>
-					</tr>
-					<tr>
-						<td><div class="startGame" id="ez">Easy</div></td>
-					</tr>
-					<tr>
-						<td><div class="startGame" id="mm">Medium</div></td>
-					</tr>
-					<tr>
-						<td><div class="startGame" id="hard">Hard</div></td>
-					</tr>
-					<tr>
-						<td><div class="startGame" id="vhard">Very Hard</div></td>
-					</tr>
-
-					<tr>
-						<td>Mines: </td>
-						<td><input type="number" id="numberMines" min="1" max="200" value="10"></td>
-					</tr>
-
-					<tr>
-						<td>Width: </td>
-						<td><input type="number" id="width" min="1" max="30" value="10"></td>
-					</tr>
-
-					<tr>
-						<td>Height: </td>
-						<td><input type="number" id="height" min="1" max="30" value="10"></td>
-					</tr>
-
-					<tr>
-						<td><div class="startGame" id="new">New Custom Game</div></td>
-					</tr>
-				</table>
-
-
+			<div class="top">
+				<div id="score"></div> <div id="hiscore"></div> <div id="mines"></div>
 			</div>
 
-
 			<div class="game-wrapper">
-				<div class="top">
-					<div id="score"></div> <div id="hiscore"></div> <div id="mines"></div>
-				</div>
+
 				<div id="game"></div>
 			</div>
 
+			<div class="settings">
+				<div class="difficulty">
+					<div class="startGame" id="ez">Easy</div>
+					<div class="startGame" id="mm">Medium</div>
+					<div class="startGame" id="hard">Hard</div>
+					<div class="startGame" id="vhard">Very Hard</div>
+				</div>
 
+				<div class="custom">
+					<div class="input-field">
+						<p>Mines</p>
+						<input type="number" id="numberMines" min="1" max="200" value="10">
+					</div>
+
+					<div class="input-field">
+						<p>Width</p>
+						<input type="number" id="width" min="1" max="30" value="10">
+					</div>
+
+					<div class="input-field">
+						<p>Height</p>
+						<input type="number" id="height" min="1" max="30" value="10">
+					</div>
+				</div>
+				<div class="startGame" id="new">New Custom Game</div>
+
+
+			</div>
+
+
+			<div class="footbar">
+				<div class="title">Minefield </div>
+				<div class="copy">&#169; Renzo Cotti 2018</div>
+			</div>
 
 	</body>
 </html>
